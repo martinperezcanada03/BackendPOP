@@ -8,8 +8,8 @@ async function bootstrap() {
 
   app.enableCors();
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT;
   await app.listen(PORT);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  console.log(`Application is running on PORT : ${PORT}`);
 }
 bootstrap();

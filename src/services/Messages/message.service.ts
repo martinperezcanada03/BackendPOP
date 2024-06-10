@@ -27,7 +27,7 @@ export class MessageService {
     }).exec();
   }
 
-  async deleteMessagesForChat(senderId: string, receiverId: string, productId: string) {
+  async deleteMessagesForChat(senderId: string, receiverId: string, productId: string): Promise<any> {
     return this.messageModel.deleteMany({
       $and: [
         { productId: productId },
