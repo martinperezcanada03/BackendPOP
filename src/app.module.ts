@@ -21,7 +21,7 @@ import { MessageSchema } from './schemas/message';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(`mongodb://localhost:27017/FernanPOP`),
+    MongooseModule.forRoot(`mongodb+srv://martinperez0345:qF41cCDb6Ycvmidx@fernanpop.tpugpvm.mongodb.net/fernanpop?retryWrites=true&w=majority&appName=fernanPOP`),
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }, { name: 'User', schema: UserSchema }, { name: 'Message', schema: MessageSchema }]),
     JwtModule.register({
       secret: process.env.JWT_SECRET, 
